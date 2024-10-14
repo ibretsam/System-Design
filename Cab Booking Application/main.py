@@ -140,14 +140,14 @@ class CabBookingApplication:
         print(f"Calculating bill for user {username}")
         distance = self.calculate_distance(source, destination)
         total_amount = distance * 10
-        print(f"Ride ended bill amount Rs {total_amount}")
+        print(f"Ride ended bill amount ${total_amount}")
         return total_amount
 
     def find_total_earning(self):
         logging.debug("Calculating total earnings")
         with self.driver_lock:
             for driver in self.drivers.values():
-                logging.info(f"{driver.name} earned Rs {driver.earning}")
+                logging.info(f"{driver.name} earned ${driver.earning}")
 
     def process_ride_request(self, username, source, destination, driver_name):
         try:

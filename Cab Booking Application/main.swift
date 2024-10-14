@@ -188,7 +188,7 @@ class CabBookingApplication {
         print("Calculating bill for user \(username)")
         let distance = calculateDistance(source: source, destination: destination)
         let totalAmount = distance * 10
-        print("Ride ended bill amount Rs \(totalAmount)")
+        print("Ride ended bill amount $\(totalAmount)")
         return totalAmount
     }
     
@@ -197,7 +197,7 @@ class CabBookingApplication {
         driverLock.lock()
         defer { driverLock.unlock() }
         for driver in drivers.values {
-            print("\(driver.name) earned Rs \(driver.earning)")
+            print("\(driver.name) earned $\(driver.earning)")
         }
     }
     

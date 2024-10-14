@@ -163,7 +163,7 @@ func (app *CabBookingApplication) CalculateBill(username string, source, destina
 	log.Printf("Calculating bill for user %s", username)
 	distance := calculateDistance(source, destination)
 	totalAmount := int(distance * 10)
-	log.Printf("Ride ended bill amount Rs %d", totalAmount)
+	log.Printf("Ride ended bill amount $%d", totalAmount)
 	return totalAmount
 }
 
@@ -172,7 +172,7 @@ func (app *CabBookingApplication) FindTotalEarning() {
 	app.DriverLock.RLock()
 	for _, driver := range app.Drivers {
 		driver.Lock.Lock()
-		log.Printf("%s earned Rs %d", driver.Name, driver.Earning)
+		log.Printf("%s earned $%d", driver.Name, driver.Earning)
 		driver.Lock.Unlock()
 	}
 	app.DriverLock.RUnlock()

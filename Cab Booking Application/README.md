@@ -82,7 +82,7 @@ Implement a cab booking application. Below are the expected features from the sy
   - `choose_ride("Thu Tr.", "Driver1")`
     - **Output:** Ride Started
   - `calculateBill("Thu Tr.")`
-    - **Output:** Ride Ended bill amount Rs 60
+    - **Output:** Ride Ended bill amount $60
   - Backend API Call:
     - `update_userLocation("Thu Tr.", (15, 3))`
     - `update_driverLocation("Driver1", (15, 3))`
@@ -94,6 +94,6 @@ Implement a cab booking application. Below are the expected features from the sy
 ### 4. Total earning by drivers:
 - `find_total_earning()`
   - **Output:**
-    - Driver1 earned Rs 60
-    - Driver2 earned Rs 0
-    - Driver3 earned Rs 0
+    - Driver1 earned $60
+    - Driver2 earned $0
+    - Driver3 earned $0

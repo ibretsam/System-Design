@@ -275,7 +275,7 @@ class CabBookingApplication {
         logger.info("Calculating bill for user " + username);
         double distance = calculateDistance(source, destination);
         int totalAmount = (int) (distance * 10);
-        logger.info("Ride ended bill amount Rs " + totalAmount);
+        logger.info("Ride ended bill amount $" + totalAmount);
         return totalAmount;
     }
 
@@ -286,7 +286,7 @@ class CabBookingApplication {
             for (Driver driver : drivers.values()) {
                 driver.lock.lock();
                 try {
-                    logger.info(driver.getName() + " earned Rs " + driver.getEarning());
+                    logger.info(driver.getName() + " earned $" + driver.getEarning());
                 } finally {
                     driver.lock.unlock();
                 }
